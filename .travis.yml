@@ -4,7 +4,4 @@ language: java
 jdk:
   - oraclejdk8
 
-# install
-install: mvn install
-
-script: mvn test
+script: mvn surefire:test -Dtest=YamlTest.java
