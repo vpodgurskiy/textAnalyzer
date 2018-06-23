@@ -1,8 +1,10 @@
+## this is a java project using maven
 language: java
 
 jdk:
   - oraclejdk8
 
-install: true
+# install
+install: mvn install
 
-script: mvn test -f ./pom.xml
+script: mvn test
