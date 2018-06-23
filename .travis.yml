@@ -3,5 +3,6 @@ language: java
 jdk:
   - oraclejdk8
 
-script:
-  - mvn test -B
+install: true
+
+script: mvn test -f ./pom.xml
