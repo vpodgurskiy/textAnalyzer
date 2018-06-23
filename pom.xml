@@ -12,6 +12,7 @@
         <directory>target</directory>
         <outputDirectory>target/classes</outputDirectory>
         <testOutputDirectory>target/test-classes</testOutputDirectory>
+        <testSourceDirectory>tst</testSourceDirectory>
     </build>
 
     <dependencies>
