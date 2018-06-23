@@ -7,6 +7,13 @@
     <groupId>io.hexlet.podgurskiy.textAnalyzer</groupId>
     <artifactId>textAnalyzer</artifactId>
     <version>1.0</version>
+
+    <build>
+        <directory>target</directory>
+        <outputDirectory>target/classes</outputDirectory>
+        <testOutputDirectory>target/test-classes</testOutputDirectory>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
