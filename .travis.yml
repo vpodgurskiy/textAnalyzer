@@ -4,5 +4,17 @@ language: java
 jdk:
   - oraclejdk8
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=d3d82e6d76b17e65b373b58c2f773c53c4bd7434bbe55d27808b623cfbbac871
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - mvn test
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
