@@ -2,9 +2,9 @@ package controller;
 
 import model.Text;
 
-public class ReceiveController {
+public class ParseController {
 
-	public Text getText() {
+	public Text parse() {
 		return null;
 	}
 
