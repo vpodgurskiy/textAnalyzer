@@ -10,5 +10,4 @@ public class InputStreamController {
 	public Commander parseInputStream() {
 		return null;
 	}
-
 }

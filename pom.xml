@@ -21,7 +21,7 @@
                 <version>0.7.9</version>
                 <configuration>
                     <skip>false</skip>
-                    <check/>
+
                     <rules>
                         <rule>
                             <element>CLASS</element>
@@ -61,13 +61,13 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
-                            <check>
-                                <instructionRatio>100</instructionRatio>
-                                <branchRatio>95</branchRatio>
-                                <lineRatio>90</lineRatio>
-                                <methodRatio>90</methodRatio>
-                                <classRatio>90</classRatio>
-                            </check>
+                            <!--<check>-->
+                                <!--<instructionRatio>100</instructionRatio>-->
+                                <!--<branchRatio>95</branchRatio>-->
+                                <!--<lineRatio>90</lineRatio>-->
+                                <!--<methodRatio>90</methodRatio>-->
+                                <!--<classRatio>90</classRatio>-->
+                            <!--</check>-->
                         </configuration>
                     </execution>
                 </executions>
