@@ -1,6 +1,5 @@
 package controller;
 
-import model.String;
 import model.Commander;
 
 public class InputStreamController {
@@ -10,5 +9,4 @@ public class InputStreamController {
 	public Commander parseInputStream() {
 		return null;
 	}
-
 }
