@@ -10,5 +10,4 @@ public class PrintAnalyzer {
         System.out.println(String.format("Всего символов без пробелов и переносов строк: %s", analyzeStructure.totalCharWithoutSpacesOrLineBreaks));
         System.out.println(String.format("Всего слов: %s", analyzeStructure.totalWords));
     }
-
 }

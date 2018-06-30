@@ -14,6 +14,5 @@ public class Main {
         final AnalyzeStructure analyzeStructure = TextAnalyzer.analyzeText(queryStringParameters.text);
 
         PrintAnalyzer.printAnalyzeStructure(analyzeStructure);
-
     }
 }

@@ -3,9 +3,8 @@ public class TextAnalyzer {
 
 	/**
 	 * Анализатор текста.
-	 * На вход принимает текст, анализирует его согласно модели.
-	 * Дополнительно тут можно прописать выбор своей модели.
-	 * Возвращает структуру анализа.
+	 * На вход принимает текст, анализирует его согласно ключам (class QueryParameters).
+	 * Возвращает структуру анализа(class AnalyzeStructure)
 	 *
 	 * @param  text который нужно проанализировать с помощью выбранной модели анализа.
 	 * @return структура проделанного анализа, содержит итоги анализа.
@@ -29,15 +28,9 @@ public class TextAnalyzer {
 			}
 			if(!" ".equals(arr[i]) && !"\n".equals(arr[i])) {
 				totalCharWithoutSpacesOrLineBreaks += 1;
-
 			}
 		}
 
-		final AnalyzeStructure analyzeStructure = new AnalyzeStructure(totalChar, totalCharWithoutSpaces,
-				totalCharWithoutSpacesOrLineBreaks, totalWords);
-
-		return analyzeStructure;
-
+		return new AnalyzeStructure(totalChar, totalCharWithoutSpaces, totalCharWithoutSpacesOrLineBreaks, totalWords);
 	}
-
 }
