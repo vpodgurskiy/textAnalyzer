@@ -1,9 +1,6 @@
 ## this is a java project using maven
 language: java
 
-jdk:
-  - oraclejdk8
-
 script:
   - mvn test
 
