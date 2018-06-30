@@ -1,4 +1,10 @@
 
+import analyzer.TextAnalyzer;
+import model.AnalysisStructure;
+import model.QueryParameters;
+import outputer.ProcessingTheResult;
+import parser.InputStreamParser;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,8 +17,8 @@ public class Main {
 
         final QueryParameters queryStringParameters = InputStreamParser.parseInputStream(inputStream);
 
-        final AnalyzeStructure analyzeStructure = TextAnalyzer.analyzeText(queryStringParameters.text);
+        final AnalysisStructure analyzeStructure = TextAnalyzer.analyzeText(queryStringParameters);
 
-        PrintAnalyzer.printAnalyzeStructure(analyzeStructure);
+        ProcessingTheResult.result(queryStringParameters, analyzeStructure);
     }
 }

@@ -1,14 +1,16 @@
+package model;
+
 /**
  * Модель результата анализа текста.
  * Показывает, какие параметры включены в анализ.
  * Хранит результаты анализа в себе.
  */
-public class AnalyzeStructure {
+public class AnalysisStructure {
 
-    int totalChar;
-    int totalCharWithoutSpaces;
-    int totalCharWithoutSpacesOrLineBreaks;
-    int totalWords;
+    public final int totalChar;
+    public final int totalCharWithoutSpaces;
+    public final int totalCharWithoutSpacesOrLineBreaks;
+    public final int totalWords;
 
     /**
      * Конструктор структуры анализа.
@@ -17,8 +19,8 @@ public class AnalyzeStructure {
      * @param totalCharWithoutSpacesOrLineBreaks всего символов без пробелов и переносов строк
      * @param totalWords всего слов
      */
-    public AnalyzeStructure(final int totalChar, final int totalCharWithoutSpaces,
-                            final int totalCharWithoutSpacesOrLineBreaks, final int totalWords) {
+    public AnalysisStructure(final int totalChar, final int totalCharWithoutSpaces,
+                             final int totalCharWithoutSpacesOrLineBreaks, final int totalWords) {
 
         this.totalChar = totalChar;
         this.totalCharWithoutSpaces = totalCharWithoutSpaces;
