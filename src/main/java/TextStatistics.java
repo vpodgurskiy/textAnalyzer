@@ -1,3 +1,6 @@
+//Думаю тут тоже стоит доработать модификаторы доступа. Не все должно быть public.
+//Не всегда класс должен быть доступен всем - это тоже нужно учитывать. Б - безопасность )))
+
 public class TextStatistics {
     protected final int totalChar;
     protected final int totalCharWithoutSpaces;
