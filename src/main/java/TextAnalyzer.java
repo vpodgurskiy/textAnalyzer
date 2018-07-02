@@ -7,6 +7,8 @@ public class TextAnalyzer {
      * @param text текст для анализа.
      * @return структура проделанного анализа, содержит итоги анализа.
      */
+
+    //после разброса по пакета - не забудь подправить модификатор доступа.
     protected TextStatistics textParser(final String text) {
         final int totalChar = text.length();
         final String delimiter = " ";
