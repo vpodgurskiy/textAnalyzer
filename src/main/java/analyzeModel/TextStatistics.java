@@ -1,11 +1,27 @@
-//Думаю тут тоже стоит доработать модификаторы доступа. Не все должно быть public.
-//Не всегда класс должен быть доступен всем - это тоже нужно учитывать. Б - безопасность )))
+package analyzeModel;
 
 public class TextStatistics {
-    protected final int totalChar;
-    protected final int totalCharWithoutSpaces;
-    protected final int totalCharWithoutSpacesAndLineBreaks;
-    protected final int totalWords;
+
+    private final int totalChar;
+    private final int totalCharWithoutSpaces;
+    private final int totalCharWithoutSpacesAndLineBreaks;
+    private final int totalWords;
+
+    public int getTotalChar() {
+        return totalChar;
+    }
+
+    public int getTotalCharWithoutSpaces() {
+        return totalCharWithoutSpaces;
+    }
+
+    public int getTotalCharWithoutSpacesAndLineBreaks() {
+        return totalCharWithoutSpacesAndLineBreaks;
+    }
+
+    public int getTotalWords() {
+        return totalWords;
+    }
 
     /**
      * Конструктор структуры анализа.
