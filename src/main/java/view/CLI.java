@@ -1,9 +1,8 @@
 package view;
 
 import analyzer.TextAnalyzer;
-import resultHandler.AnalysisOutput;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class CLI {
 

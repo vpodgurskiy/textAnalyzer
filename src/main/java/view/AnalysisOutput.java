@@ -1,4 +1,4 @@
-package resultHandler;
+package view;
 
 import analyzeModel.TextStatistics;
 
@@ -13,8 +13,8 @@ public class AnalysisOutput {
         System.out.println();
         System.out.println(String.format("Всего символов в тексте: %s", textStatistics.getTotalChar()));
         System.out.println(String.format("Всего символов без пробелов: %s", textStatistics.getTotalCharWithoutSpaces()));
-        System.out.println(String.format("Всего символов без пробелов и переносов строк: %s", textStatistics.getTotalCharWithoutSpacesAndLineBreaks()));
-        System.out.println(String.format("Всего слов: %s", textStatistics.getTotalWords()));
+        System.out.println(String.format("Количество встречающихся букв: %s", textStatistics.getNumberOfCharacters()));
+        System.out.println(String.format("Количество встречающихся слов: %s", textStatistics.getNumberOfWords()));
         System.out.println();
     }
 }

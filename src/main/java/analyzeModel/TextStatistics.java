@@ -1,11 +1,13 @@
 package analyzeModel;
 
+import java.util.HashMap;
+
 public class TextStatistics {
 
     private final int totalChar;
     private final int totalCharWithoutSpaces;
-    private final int totalCharWithoutSpacesAndLineBreaks;
-    private final int totalWords;
+    private final HashMap<Character, Integer> numberOfCharacters;
+    private final HashMap<String, Integer> numberOfWords;
 
     public int getTotalChar() {
         return totalChar;
@@ -15,28 +17,28 @@ public class TextStatistics {
         return totalCharWithoutSpaces;
     }
 
-    public int getTotalCharWithoutSpacesAndLineBreaks() {
-        return totalCharWithoutSpacesAndLineBreaks;
+    public HashMap<Character, Integer> getNumberOfCharacters() {
+        return numberOfCharacters;
     }
 
-    public int getTotalWords() {
-        return totalWords;
+    public HashMap<String, Integer> getNumberOfWords() {
+        return numberOfWords;
     }
 
     /**
      * Конструктор структуры анализа.
      * @param totalChar всего символов в тексте
      * @param totalCharWithoutSpaces всего символов без пробелов
-     * @param totalCharWithoutSpacesOrLineBreaks всего символов без пробелов и переносов строк
-     * @param totalWords всего слов
+     * @param numberOfWords количество встречающихся слов
+     * @param numberOfCharacters количество встречающихся букв
      */
     public TextStatistics(final int totalChar, final int totalCharWithoutSpaces,
-                          final int totalCharWithoutSpacesOrLineBreaks, final int totalWords) {
+                          final HashMap<String, Integer> numberOfWords, final HashMap<Character, Integer> numberOfCharacters) {
 
         this.totalChar = totalChar;
         this.totalCharWithoutSpaces = totalCharWithoutSpaces;
-        this.totalCharWithoutSpacesAndLineBreaks = totalCharWithoutSpacesOrLineBreaks;
-        this.totalWords = totalWords;
+        this.numberOfWords = numberOfWords;
+        this.numberOfCharacters = numberOfCharacters;
 
     }
 }
