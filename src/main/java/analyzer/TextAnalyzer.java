@@ -37,7 +37,7 @@ public class TextAnalyzer {
 
     private static HashMap<Character, Integer> numberOfCharacters(String text) {
         char[] textArr = text.toCharArray();
-        List<Character> charArr = new ArrayList<>();
+        List<Character> charArr = new ArrayList<Character>();
         for (char i : textArr) {
             if (Character.isLetter(i)) {
                 charArr.add(i);
@@ -63,7 +63,7 @@ public class TextAnalyzer {
 
     private static HashMap<String, Integer> numberOfWords(String text) {
         char[] textArr = text.toCharArray();
-        List<Character> charArr = new ArrayList<>();
+        List<Character> charArr = new ArrayList<Character>();
         for (char i : textArr) {
             if (Character.isLetter(i) || Character.isWhitespace(i)) {
                 charArr.add(i);
