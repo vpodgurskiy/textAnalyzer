@@ -33,12 +33,24 @@ public class TextStatistics {
      * @param numberOfCharacters количество встречающихся букв
      */
     public TextStatistics(final int totalChar, final int totalCharWithoutSpaces,
-                          final HashMap<String, Integer> numberOfWords, final HashMap<Character, Integer> numberOfCharacters) {
+                          final HashMap<String, Integer> numberOfWords,
+                          final HashMap<Character, Integer> numberOfCharacters) {
 
         this.totalChar = totalChar;
         this.totalCharWithoutSpaces = totalCharWithoutSpaces;
         this.numberOfWords = numberOfWords;
         this.numberOfCharacters = numberOfCharacters;
+    }
 
+    @Override
+    public String toString() {
+        String str = "\n";
+        str += String.format("Всего символов в тексте: %s\n", this.getTotalChar());
+        str += String.format("Всего символов без пробелов: %s\n", this.getTotalCharWithoutSpaces());
+        str += String.format("Количество встречающихся букв: %s\n", this.getNumberOfCharacters());
+        str += String.format("Количество встречающихся слов: %s\n", this.getNumberOfWords());
+        str += "\n";
+
+        return str;
     }
 }
