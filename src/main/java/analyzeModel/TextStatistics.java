@@ -1,13 +1,13 @@
 package analyzeModel;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class TextStatistics {
 
     private final int totalChar;
     private final int totalCharWithoutSpaces;
-    private final HashMap<Character, Integer> numberOfCharacters;
-    private final HashMap<String, Integer> numberOfWords;
+    private final TreeMap<Character, Integer> numberOfCharacters;
+    private final TreeMap<String, Integer> numberOfWords;
 
     public int getTotalChar() {
         return totalChar;
@@ -17,11 +17,11 @@ public class TextStatistics {
         return totalCharWithoutSpaces;
     }
 
-    public HashMap<Character, Integer> getNumberOfCharacters() {
+    public TreeMap<Character, Integer> getNumberOfCharacters() {
         return numberOfCharacters;
     }
 
-    public HashMap<String, Integer> getNumberOfWords() {
+    public TreeMap<String, Integer> getNumberOfWords() {
         return numberOfWords;
     }
 
@@ -33,8 +33,8 @@ public class TextStatistics {
      * @param numberOfCharacters количество встречающихся букв
      */
     public TextStatistics(final int totalChar, final int totalCharWithoutSpaces,
-                          final HashMap<String, Integer> numberOfWords,
-                          final HashMap<Character, Integer> numberOfCharacters) {
+                          final TreeMap<String, Integer> numberOfWords,
+                          final TreeMap<Character, Integer> numberOfCharacters) {
 
         this.totalChar = totalChar;
         this.totalCharWithoutSpaces = totalCharWithoutSpaces;

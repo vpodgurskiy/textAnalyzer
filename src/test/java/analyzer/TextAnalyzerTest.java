@@ -2,7 +2,8 @@ package analyzer;
 
 import analyzeModel.TextStatistics;
 import org.junit.Test;
-import java.util.HashMap;
+import java.util.TreeMap;
+
 import static org.junit.Assert.assertEquals;
 
 public class TextAnalyzerTest {
@@ -13,10 +14,10 @@ public class TextAnalyzerTest {
         final TextStatistics textStatistics = TextAnalyzer.textParser(textForAnalyze);
         final int expectedTotalChar =  14;
         final int expectedTotalCharWithoutSpaces =  12;
-        final HashMap<String, Integer> expectedNumberOfWords =  new HashMap<String, Integer>();
+        final TreeMap<String, Integer> expectedNumberOfWords =  new TreeMap<String, Integer>();
         expectedNumberOfWords.put("раз", 2);
         expectedNumberOfWords.put("два", 1);
-        final HashMap<Character, Integer> expectedNumberOfCharacters =  new HashMap<Character, Integer>();
+        final TreeMap<Character, Integer> expectedNumberOfCharacters =  new TreeMap<Character, Integer>();
         expectedNumberOfCharacters.put('р', 2);
         expectedNumberOfCharacters.put('д', 1);
         expectedNumberOfCharacters.put('а', 3);
@@ -25,8 +26,8 @@ public class TextAnalyzerTest {
 
         final int actualTotalChar = textStatistics.getTotalChar();
         final int actualTotalCharWithoutSpaces = textStatistics.getTotalCharWithoutSpaces();
-        final HashMap<String, Integer> actualNumberOfWords = textStatistics.getNumberOfWords();
-        final HashMap<Character, Integer> actualNumberOfCharacters = textStatistics.getNumberOfCharacters();
+        final TreeMap<String, Integer> actualNumberOfWords = textStatistics.getNumberOfWords();
+        final TreeMap<Character, Integer> actualNumberOfCharacters = textStatistics.getNumberOfCharacters();
 
         assertEquals(expectedTotalChar, actualTotalChar);
         assertEquals(expectedTotalCharWithoutSpaces, actualTotalCharWithoutSpaces);

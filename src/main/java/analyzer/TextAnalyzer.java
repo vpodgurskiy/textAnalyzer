@@ -2,9 +2,7 @@ package analyzer;
 
 import analyzeModel.TextStatistics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class TextAnalyzer {
     /**
@@ -18,8 +16,8 @@ public class TextAnalyzer {
     public static TextStatistics textParser(final String text) {
         final int totalChar = totalChar(text);
         final int totalCharWithoutSpaces = totalCharWithoutSpaces(text);
-        final HashMap<Character, Integer> numberOfCharacters = numberOfCharacters(text);
-        final HashMap<String, Integer> numberOfWords = numberOfWords(text);
+        final TreeMap<Character, Integer> numberOfCharacters = numberOfCharacters(text);
+        final TreeMap<String, Integer> numberOfWords = numberOfWords(text);
 
         return new TextStatistics(totalChar, totalCharWithoutSpaces, numberOfWords, numberOfCharacters);
     }
@@ -35,19 +33,19 @@ public class TextAnalyzer {
         return totalCharWithoutSpaces;
     }
 
-    private static HashMap<Character, Integer> numberOfCharacters(String text) {
+    private static TreeMap<Character, Integer> numberOfCharacters(String text) {
         char[] textArr = text.toCharArray();
         List<Character> charArr = new ArrayList<Character>();
         for (char i : textArr) {
             if (Character.isLetter(i)) {
-                charArr.add(i);
+                charArr.add(Character.toLowerCase(i));
             }
         }
-        HashMap<Character, Integer> charUnique = new HashMap<Character, Integer>();
+        TreeMap<Character, Integer> charUnique = new TreeMap<Character, Integer>();
 
         for (char i : charArr) {
-            Integer value = charUnique.get(i);
-            if (value != null) {
+            if (charUnique.containsKey(i)) {
+                Integer value = charUnique.get(i);
                 charUnique.put(i, ++value);
                 continue;
             }
@@ -61,12 +59,12 @@ public class TextAnalyzer {
         return totalChar;
     }
 
-    private static HashMap<String, Integer> numberOfWords(String text) {
+    private static TreeMap<String, Integer> numberOfWords(String text) {
         char[] textArr = text.toCharArray();
         List<Character> charArr = new ArrayList<Character>();
         for (char i : textArr) {
             if (Character.isLetter(i) || Character.isWhitespace(i)) {
-                charArr.add(i);
+                charArr.add(Character.toLowerCase(i));
             }
         }
         String str = "";
@@ -76,11 +74,11 @@ public class TextAnalyzer {
         }
         String[] strArr = str.split(" ");
 
-        HashMap<String, Integer> wordUnique = new HashMap<String, Integer>();
+        TreeMap<String, Integer> wordUnique = new TreeMap<String, Integer>();
 
         for (String i : strArr) {
-            Integer value = wordUnique.get(i);
-            if (value != null) {
+            if (wordUnique.containsKey(i)) {
+                Integer value = wordUnique.get(i);
                 wordUnique.put(i, ++value);
                 continue;
             }
