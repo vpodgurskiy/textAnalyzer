@@ -1,7 +1,6 @@
 package analyzer;
 
 import analyzeModel.TextStatistics;
-
 import java.util.*;
 
 public class TextAnalyzer {
@@ -22,6 +21,11 @@ public class TextAnalyzer {
         return new TextStatistics(totalChar, totalCharWithoutSpaces, numberOfWords, numberOfCharacters);
     }
 
+    /**
+     * Метод на вход принимает текст, возвращает кол-во символов без пробелов
+     * @param text
+     * @return int
+     */
     private static int totalCharWithoutSpaces(String text) {
         String[] arr = text.split("");
         int totalCharWithoutSpaces = 0;
@@ -33,6 +37,12 @@ public class TextAnalyzer {
         return totalCharWithoutSpaces;
     }
 
+    /**
+     * Метод на вход принимает техт, возвращает сортированный по ключам map.
+     * Метод подсчитывает колличество букв, в тексте, заглавные или сторчные как одна.
+     * @param text
+     * @return сортированный map
+     */
     private static TreeMap<Character, Integer> numberOfCharacters(String text) {
         char[] textArr = text.toCharArray();
         List<Character> charArr = new ArrayList<Character>();
@@ -54,11 +64,22 @@ public class TextAnalyzer {
         return charUnique;
     }
 
+    /**
+     * Метод принимает на вход текст и подсчитывает общее число символов в нем.
+     * @param text
+     * @return int
+     */
     private static int totalChar(String text) {
         final int totalChar = text.length();
         return totalChar;
     }
 
+    /**
+     * Метод принимает на вход текст, подсчитывает кол-во каждого слова в тексте.
+     * Метод возвращает сортированный map. Слово и кол-во этого слова в тексте.
+     * @param text
+     * @return сортированный map
+     */
     private static TreeMap<String, Integer> numberOfWords(String text) {
         char[] textArr = text.toCharArray();
         List<Character> charArr = new ArrayList<Character>();

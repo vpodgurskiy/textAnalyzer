@@ -9,18 +9,34 @@ public class TextStatistics {
     private final TreeMap<Character, Integer> numberOfCharacters;
     private final TreeMap<String, Integer> numberOfWords;
 
+    /**
+     * Метод возвращает значение поля totalChar
+     * @return totalChar
+     */
     public int getTotalChar() {
         return totalChar;
     }
 
+    /**
+     * Метод возвращает значение поля totalCharWithoutSpaces
+     * @return totalCharWithoutSpaces
+     */
     public int getTotalCharWithoutSpaces() {
         return totalCharWithoutSpaces;
     }
 
+    /**
+     * Метод возвращает значение поля numberOfCharacters
+     * @return numberOfCharacters
+     */
     public TreeMap<Character, Integer> getNumberOfCharacters() {
         return numberOfCharacters;
     }
 
+    /**
+     * Метод возвращает значение поля numberOfWords
+     * @return numberOfWords
+     */
     public TreeMap<String, Integer> getNumberOfWords() {
         return numberOfWords;
     }
@@ -42,6 +58,10 @@ public class TextStatistics {
         this.numberOfCharacters = numberOfCharacters;
     }
 
+    /**
+     * Переопределенный метод, формирует строку вывода в консоль
+     * @return srt
+     */
     @Override
     public String toString() {
         String str = "\n";
