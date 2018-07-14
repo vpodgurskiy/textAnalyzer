@@ -4,10 +4,12 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bcd7049d885da1de93c4/maintainability)](https://codeclimate.com/github/vpodgurskiy/textAnalyzer/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bcd7049d885da1de93c4/test_coverage)](https://codeclimate.com/github/vpodgurskiy/textAnalyzer/test_coverage)
 
-##describe
+## describe
+
 _Анализатор текста принимает на вход текст из консоли, проводит его анализ, согласно модели и выводит результат в консоль, в виде списка._
 
-##run
+## run
+
 $ java -jar (path)/textAnalyzer-1.0-SNAPSHOT.jar
 
 
