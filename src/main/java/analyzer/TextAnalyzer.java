@@ -86,8 +86,11 @@ public class TextAnalyzer {
         for (char i : textArr) {
             if (Character.isLetter(i) || Character.isWhitespace(i)) {
                 charArr.add(Character.toLowerCase(i));
+            }else {
+                charArr.add(' ');
             }
         }
+
         String str = "";
         for (int i = 0; i < charArr.size(); i++){
             str += charArr.toString().join("", String.valueOf(charArr.get(i)));
@@ -98,6 +101,7 @@ public class TextAnalyzer {
         TreeMap<String, Integer> wordUnique = new TreeMap<String, Integer>();
 
         for (String i : strArr) {
+            if (i.isEmpty()) continue;
             if (wordUnique.containsKey(i)) {
                 Integer value = wordUnique.get(i);
                 wordUnique.put(i, ++value);
