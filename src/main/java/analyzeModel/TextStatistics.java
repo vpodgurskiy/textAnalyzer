@@ -64,13 +64,14 @@ public class TextStatistics {
      */
     @Override
     public String toString() {
-        String str = "\n";
-        str += String.format("Всего символов в тексте: %s\n", this.getTotalChar());
-        str += String.format("Всего символов без пробелов: %s\n", this.getTotalCharWithoutSpaces());
-        str += String.format("Количество встречающихся букв: %s\n", this.getNumberOfCharacters());
-        str += String.format("Количество встречающихся слов: %s\n", this.getNumberOfWords());
-        str += "\n";
+        StringBuilder stringBuilder = new StringBuilder()
+                .append("\n")
+                .append(String.format("Всего символов в тексте: %s\n", this.getTotalChar()))
+                .append(String.format("Всего символов без пробелов: %s\n", this.getTotalCharWithoutSpaces()))
+                .append(String.format("Количество встречающихся букв: %s\n", this.getNumberOfCharacters()))
+                .append(String.format("Количество встречающихся слов: %s\n", this.getNumberOfWords()))
+                .append("\n");
 
-        return str;
+        return stringBuilder.toString();
     }
 }
