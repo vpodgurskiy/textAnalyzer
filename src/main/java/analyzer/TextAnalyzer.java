@@ -12,13 +12,27 @@ public class TextAnalyzer {
      * @param text текст для анализа.
      * @return структура проделанного анализа, содержит итоги анализа.
      */
-    public static TextStatistics textParser(final String text) {
+    public TextStatistics parseText(final String text) {
         final int totalChar = totalChar(text);
         final int totalCharWithoutSpaces = totalCharWithoutSpaces(text);
         final TreeMap<Character, Integer> numberOfCharacters = numberOfCharacters(text);
         final TreeMap<String, Integer> numberOfWords = numberOfWords(text);
 
         return new TextStatistics(totalChar, totalCharWithoutSpaces, numberOfWords, numberOfCharacters);
+    }
+
+    public TextStatistics parseTextChar(final String text) {
+        final int totalChar = totalChar(text);
+        final int totalCharWithoutSpaces = totalCharWithoutSpaces(text);
+
+        return new TextStatistics(totalChar, totalCharWithoutSpaces);
+    }
+
+    public TextStatistics parseTextWord(final String text) {
+        final TreeMap<Character, Integer> numberOfCharacters = numberOfCharacters(text);
+        final TreeMap<String, Integer> numberOfWords = numberOfWords(text);
+
+        return new TextStatistics(numberOfWords, numberOfCharacters);
     }
 
     /**
